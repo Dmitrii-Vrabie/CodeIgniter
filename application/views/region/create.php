@@ -4,7 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
     <?= form_open('region/create'); ?>
         <div class="form-group">
-        <label for="exampleInputEmail1">Area</label>
+            <label for="name">Name</label>
+            <?= form_input(['name' => 'name', 'id' => 'name', 'class' => 'form-control']) ?>
+            <?php echo form_error('name'); ?>
+        </div>
+        <div class="form-group">
+        <label for="area">Area</label>
             <?= form_input(['name' => 'area', 'id' => 'area', 'class' => 'form-control']) ?>
             <?php echo form_error('area'); ?>
         </div>

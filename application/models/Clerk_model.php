@@ -1,18 +1,15 @@
 <?php
 
 
-class Region_model extends CI_Model
+class Clerk_model extends CI_Model
 {
-    const TABLE = 'region';
+    const TABLE = 'clerks';
 
-    public $name;
-    public $area;
-    public $pastures_area;
-    public $population;
-    public $students;
-    public $teachers;
-    public $pensioners;
-    public $employed;
+    public $region_id;
+    public $clerks;
+    public $salary_fund_month;
+    public $salary_fund_year;
+    public $reform;
 
     public function get_entry($id)
     {
@@ -44,13 +41,10 @@ class Region_model extends CI_Model
 
     private function load()
     {
-        $this->area = $_POST['area'];
-        $this->name = $_POST['name'];
-        $this->pastures_area = $_POST['pastures_area'];
-        $this->population = $_POST['population'];
-        $this->students = $_POST['students'];
-        $this->teachers = $_POST['teachers'];
-        $this->pensioners = $_POST['pensioners'];
-        $this->employed = $_POST['employed'];
+        $this->region_id = $_POST['region_id'];
+        $this->clerks = $_POST['clerks'];
+        $this->salary_fund_month = $_POST['salary_fund_month'];
+        $this->salary_fund_year = $_POST['salary_fund_year'];
+        $this->reform = $_POST['reform'];
     }
 }

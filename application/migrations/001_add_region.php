@@ -12,6 +12,10 @@ class Migration_add_region extends CI_Migration
                     'unsigned' => true,
                     'auto_increment' => true
                 ),
+                'name' => array(
+                    'type' => 'TEXT',
+                    'null' => true,
+                ),
                 'area' => array(
                     'type' => 'DECIMAL',
                     'constraint' => '10,2',

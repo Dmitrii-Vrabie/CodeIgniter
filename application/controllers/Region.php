@@ -19,13 +19,15 @@ class Region extends CI_Controller
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
         $this->form_validation->set_rules('area', 'Area', 'required|max_length[15]');
-        $this->form_validation->set_rules('pastures_area', 'Pastures area', 'required|max_length[15]');
+        $this->form_validation->set_rules('name', 'Name', 'required|max_length[35]');
+        $this->form_validation->set_rules('pastures_area', 'Pastures area', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $data = [];
         } else {
             $data = array(
                 'area' => $this->input->post('area'),
+                'name' => $this->input->post('name'),
                 'pastures_area' => $this->input->post('pastures_area'),
                 'population' => $this->input->post('population'),
                 'students' => $this->input->post('students'),
